@@ -1,30 +1,36 @@
 {
-  "name": "e2e",
+  "name": "rb-e2e",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "e2e/src",
+  "sourceRoot": "rb-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "e2e/cypress.config.ts",
-        "devServerTarget": "nx15:serve:development",
+        "cypressConfig": "rb-e2e/cypress.config.ts",
+        "devServerTarget": "rb:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "nx15:serve:production"
+          "devServerTarget": "rb:serve:production"
         }
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "rb-e2e/**/*.{js,ts}"
+        ]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["nx15"]
+  "implicitDependencies": [
+    "rb"
+  ]
 }

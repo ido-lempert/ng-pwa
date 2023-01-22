@@ -1,22 +1,31 @@
 {
-  "name": "nx15",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "name": "rb",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./src",
+  "sourceRoot": "rb/src",
   "prefix": "nx15",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/nx15",
-        "index": "./src/index.html",
-        "main": "./src/main.ts",
-        "polyfills": ["zone.js"],
-        "tsConfig": "./tsconfig.app.json",
+        "outputPath": "dist/rb",
+        "index": "rb/src/index.html",
+        "main": "rb/src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "rb/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["./src/favicon.ico", "./src/assets"],
-        "styles": ["./src/styles.scss"],
+        "assets": [
+          "rb/src/favicon.ico",
+          "rb/src/assets"
+        ],
+        "styles": [
+          "rb/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -50,10 +59,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "nx15:build:production"
+          "browserTarget": "rb:build:production"
         },
         "development": {
-          "browserTarget": "nx15:build:development"
+          "browserTarget": "rb:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -61,21 +70,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "nx15:build"
+        "browserTarget": "rb:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["./src/**/*.ts", "./src/**/*.html"]
+        "lintFilePatterns": [
+          "rb/**/*.ts",
+          "rb/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectName}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "jest.config.app.ts",
+        "jestConfig": "rb/jest.config.ts",
         "passWithNoTests": true
       }
     }
