@@ -1,7 +1,9 @@
+<!--<nx15-splash></nx15-splash>-->
+
 <nav>
     <ul>
         <li><a [routerLink]="'/transactions'">Transactions</a></li>
-        <li><a [routerLink]="'/capital-market'">Capital Market</a></li>
+        <li><a [routerLink]="'/capital-market'" (click)="promptPWAInstall()">Capital Market</a></li>
         <li><a [routerLink]="'/credit-cards'">Credit Cards</a></li>
     </ul>
 </nav>
