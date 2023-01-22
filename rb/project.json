@@ -21,12 +21,15 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "rb/src/favicon.ico",
-          "rb/src/assets"
+          "rb/src/assets",
+          "rb/src/manifest.webmanifest"
         ],
         "styles": [
           "rb/src/styles.scss"
         ],
-        "scripts": []
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "rb/ngsw-config.json"
       },
       "configurations": {
         "production": {
