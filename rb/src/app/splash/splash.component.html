@@ -1,0 +1,14 @@
+<ng-lottie [options]="{path: '/assets/lottie/login_clouds_top.json'}"
+           (loopComplete)="loopComplete($event)"
+           width='100vw' height='100px'></ng-lottie>
+<div class='logo'>
+    <ng-lottie [options]='poalimLoader'
+               (animationCreated)='animationCreated($event)' width='100px'
+               height='100px'></ng-lottie>
+    <div>בנק הפועלים</div>
+</div>
+
+<ng-lottie [options]="{path: '/assets/lottie/login_clouds_bottom.json'}"
+           (loopComplete)="loopComplete($event)"
+           width='100vw' height='100px'></ng-lottie>
+
